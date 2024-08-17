@@ -28,7 +28,7 @@ repos:
   hooks:
   - id: mypy
     args: ["--check-untyped-defs", "--ignore-missing-imports"]
-    files: '(rl_2048|tests)'
+    files: '(src|tests)'
 
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.3.0

@@ -60,10 +60,24 @@ Changelog = "https://github.com/FangLinHe/pytorch_vit/releases"
 version.source = "vcs"
 build.hooks.vcs.version-file = "src/pytorch_vit/_version.py"
 
-[tool.hatch.envs.default]
-features = ["test"]
-scripts.test = "pytest {args}"
+[tool.hatch.envs.test]
+dependencies = [
+    "ruff>=0.3.0",
+    "pytest>=7.2.0",
+    "pytest-cov>=4.0.0",
+]
 
+[tool.hatch.envs.test.scripts]
+lint = "ruff check . --fix"
+isort = "ruff check --select I --fix"
+test = '''
+python -m pytest -v --doctest-modules \
+  --cov=./src \
+  --cov-report html \
+  --cov-report term-missing \
+  tests \
+&& echo "It also generates .coverage file, which can be read using \`coverage report\`."
+'''
 
 [tool.pytest.ini_options]
 minversion = "6.0"
