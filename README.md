@@ -12,7 +12,7 @@
 <!-- SPHINX-START -->
 
 <!-- prettier-ignore-start -->
-[actions-badge]:            https://github.com/FangLinHe/pytorch_vit/workflows/CI/badge.svg
+[actions-badge]:            https://github.com/FangLinHe/pytorch_vit/actions/workflows/ci.yaml/badge.svg
 [actions-link]:             https://github.com/FangLinHe/pytorch_vit/actions
 [conda-badge]:              https://img.shields.io/conda/vn/conda-forge/pytorch_vit
 [conda-link]:               https://github.com/conda-forge/pytorch_vit-feedstock
