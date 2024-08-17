@@ -60,24 +60,10 @@ Changelog = "https://github.com/FangLinHe/pytorch_vit/releases"
 version.source = "vcs"
 build.hooks.vcs.version-file = "src/pytorch_vit/_version.py"
 
-[tool.hatch.envs.test]
-dependencies = [
-    "ruff>=0.3.0",
-    "pytest>=7.2.0",
-    "pytest-cov>=4.0.0",
-]
+[tool.hatch.envs.default]
+features = ["test"]
+scripts.test = "pytest {args}"
 
-[tool.hatch.envs.test.scripts]
-lint = "ruff check . --fix"
-isort = "ruff check --select I --fix"
-test = '''
-python -m pytest -v --doctest-modules \
-  --cov=./src \
-  --cov-report html \
-  --cov-report term-missing \
-  tests \
-&& echo "It also generates .coverage file, which can be read using \`coverage report\`."
-'''
 
 [tool.pytest.ini_options]
 minversion = "6.0"
@@ -152,9 +138,9 @@ isort.required-imports = ["from __future__ import annotations"]
 # typing-modules = ["pytorch_vit._compat.typing"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["T20"]
-"noxfile.py" = ["T20"]
-
+"tests/**" = ["T20", "INP001", "S101"]
+"docs/*" = ["INP001", "A001", "T201"]
+"src/pytorch_vit/__init__.py" = ["TID252"]  # Prefer absolute imports over relative imports
 
 [tool.pylint]
 py-version = "3.8"
