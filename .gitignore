@@ -3,3 +3,4 @@ __pycache__
 *.pyi
 _version.py
 .coverage
+dist
