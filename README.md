@@ -1,27 +1,27 @@
-# PyTorch ViT
+# pytorch_vit
 
-[![status](http://www.repostatus.org/badges/latest/concept.svg)](http://www.repostatus.org/#concept)
-[![ci](https://github.com/FangLinHe/pytorch_vit/actions/workflows/ci.yaml/badge.svg)](https://github.com/FangLinHe/pytorch_vit/actions/workflows/ci.yaml)
+[![Actions Status][actions-badge]][actions-link]
+[![Documentation Status][rtd-badge]][rtd-link]
 
-> This repository aims to reproduce the Vision Transformer (ViT) method using PyTorch implementation.
+[![PyPI version][pypi-version]][pypi-link]
+[![Conda-Forge][conda-badge]][conda-link]
+[![PyPI platforms][pypi-platforms]][pypi-link]
 
-## About
+[![GitHub Discussion][github-discussions-badge]][github-discussions-link]
 
-TODO
+<!-- SPHINX-START -->
 
-## Example usage
+<!-- prettier-ignore-start -->
+[actions-badge]:            https://github.com/FangLinHe/pytorch_vit/workflows/CI/badge.svg
+[actions-link]:             https://github.com/FangLinHe/pytorch_vit/actions
+[conda-badge]:              https://img.shields.io/conda/vn/conda-forge/pytorch_vit
+[conda-link]:               https://github.com/conda-forge/pytorch_vit-feedstock
+[github-discussions-badge]: https://img.shields.io/static/v1?label=Discussions&message=Ask&color=blue&logo=github
+[github-discussions-link]:  https://github.com/FangLinHe/pytorch_vit/discussions
+[pypi-link]:                https://pypi.org/project/pytorch_vit/
+[pypi-platforms]:           https://img.shields.io/pypi/pyversions/pytorch_vit
+[pypi-version]:             https://img.shields.io/pypi/v/pytorch_vit
+[rtd-badge]:                https://readthedocs.org/projects/pytorch_vit/badge/?version=latest
+[rtd-link]:                 https://pytorch_vit.readthedocs.io/en/latest/?badge=latest
 
-TODO
-
-## Installation
-
-To install the latest GitHub <RELEASE>, just call the following on the
-command line:
-
-```bash
-pip install git+https://github.com/FangLinHe/pytorch_vit@<RELEASE>
-```
-
-## Author
-
-Fang-Lin He <a href="mailto:fanglin.he.ms@gmail.com">fanglin.he.ms@gmail.com</a>
+<!-- prettier-ignore-end -->
