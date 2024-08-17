@@ -155,3 +155,7 @@ messages_control.disable = [
   "missing-function-docstring",
   "wrong-import-position",
 ]
+
+
+[tool.bandit.assert_used]
+skips = ['tests/*.py']

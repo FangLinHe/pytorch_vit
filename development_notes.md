@@ -15,9 +15,9 @@ $ pyenv activate torch_vit
   ```
 * Use Cookiecutter template
   ```
-  cookiecutter gh:dirmeier/cookiecutter-python-ml-project
+  cookiecutter gh:scientific-python/cookie
   ```
-* Install git hook
+* Install dependencies for development
   ```
-  pip install pre-commit
+  pip install -r requirements.txt
   ```
