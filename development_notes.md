@@ -21,3 +21,16 @@ $ pyenv activate torch_vit
   ```
   pip install -r requirements.txt
   ```
+* Install pre-commit hook
+  ```
+  pre-commit install
+  ```
+* Run pre-commit hook manually
+  ```
+  pre-commit run --all-files
+  ```
+* Install package and run test
+  ```
+  pip install .
+  pytest
+  ```
