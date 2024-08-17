@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name =  "pytorch_vit"
+description = "PyTorch implementation of Vision Transformer (ViT)"
+authors = [{name = "Fang-Lin He", email = "fanglin.he.ms@gmail.com"}]
+readme = "README.md"
+license = "Apache-2.0"
+homepage = "https://github.com/FangLinHe/pytorch_vit"
+keywords = []
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.9"
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools]
+packages = ["pytorch_vit"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
+
+[tool.bandit]
+skips = ["B101"]
+
+[tool.ruff]
+line-length = 80
+exclude = ["examples/**", "notebooks/**"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+extend-select = [
+  "UP", "D", "I", "PL", "S"
+]
+
+[tool.ruff.lint.pydocstyle]
+convention= 'google'
