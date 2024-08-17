@@ -34,3 +34,8 @@ $ pyenv activate torch_vit
   pip install .
   pytest
   ```
+* Install package and run test using hatch
+  ```
+  hatch env prune  # remove old environment
+  hatch run test
+  ```
