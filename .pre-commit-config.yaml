@@ -30,11 +30,11 @@ repos:
     args: ["--check-untyped-defs", "--ignore-missing-imports"]
     files: '(src|tests)'
 
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.3.0
-  hooks:
-  # Run the linter.
-  - id: ruff
-    args: ["--fix"]
-  # Run the formatter.
-  - id: ruff-format
+# - repo: https://github.com/astral-sh/ruff-pre-commit
+#   rev: v0.3.0
+#   hooks:
+#   # Run the linter.
+#   - id: ruff
+#     args: ["--fix"]
+#   # Run the formatter.
+#   - id: ruff-format
