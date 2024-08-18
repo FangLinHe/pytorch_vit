@@ -2,12 +2,10 @@
 
 ## Create Project
 * Install and activate virtual environment
-
-```
-$ pyenv virtualenv 3.12.3 torch_vit
-$ pyenv activate torch_vit
-```
-
+  ```
+  $ pyenv virtualenv 3.12.3 torch_vit
+  $ pyenv activate torch_vit
+  ```
 * Install [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
   ```
   pip install pipx
