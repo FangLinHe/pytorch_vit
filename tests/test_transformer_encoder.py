@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from pytorch_vit.transformer_encoder import TransformerEncoder
 
 

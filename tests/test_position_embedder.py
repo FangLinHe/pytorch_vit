@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from pytorch_vit.position_embedder import PositionEmbedder
 
 
