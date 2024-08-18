@@ -41,7 +41,7 @@ class PatchEmbedder(nn.Module):
 
         # BxD --> Bx1xD
         repeated_class_token: nn.Parameter = self.class_token.repeat(num_batches, 1).view(num_batches, 1, -1)
-        # concatenate Bx1xD and BxNxD --> Bx(1+N)xD --> Bx((1+N)*D)
-        embeddings: torch.Tensor = torch.cat((repeated_class_token, projected_embeddings), dim=1).view(num_batches, -1)
+        # concatenate Bx1xD and BxNxD --> Bx(1+N)xD
+        embeddings: torch.Tensor = torch.cat((repeated_class_token, projected_embeddings), dim=1)
 
         return embeddings

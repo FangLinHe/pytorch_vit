@@ -13,7 +13,5 @@ def test_patch_embedder():
     embedder = PatchEmbedder(patch_length, embedding_dim)
     patches: torch.Tensor = torch.rand((num_batches, num_patches, patch_length))
     embeddings: torch.Tensor = embedder(patches)
-    assert embeddings.shape == (num_batches, (1 + num_patches) * embedding_dim)
-
-    reshaped_embeddings: torch.Tensor = embeddings.view(num_batches, (1 + num_patches), embedding_dim)
-    assert (reshaped_embeddings[:, 0, :] == embedder.class_token).all()
+    assert embeddings.shape == (num_batches, 1 + num_patches, embedding_dim)
+    assert (embeddings[:, 0, :] == embedder.class_token).all()
