@@ -10,8 +10,10 @@ def test_patch_embedder():
     num_patches: int = 6
     patch_length: int = 256
     embedding_dim: int = 128
-    embedder = PatchEmbedder(patch_length, embedding_dim)
+    embedder = PatchEmbedder(num_patches, patch_length, embedding_dim)
     patches: torch.Tensor = torch.rand((num_batches, num_patches, patch_length))
     embeddings: torch.Tensor = embedder(patches)
     assert embeddings.shape == (num_batches, 1 + num_patches, embedding_dim)
-    assert (embeddings[:, 0, :] == embedder.class_token).all()
+    with torch.no_grad():
+        inferred_class_tokens: torch.Tensor = (embeddings - embedder.position_embeddings)[:, 0:1, :]
+        assert (inferred_class_tokens - embedder.class_token).abs().max() < 1e-5
